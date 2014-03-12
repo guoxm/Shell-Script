@@ -1,16 +1,15 @@
-
 一)安装和登陆命令
 1,进入图形界面         	startx 
 2,进入图形界面         	init 5 
 3,进入字符界面         	init 3
 4,登陆                 	login 
-5,关机   				poweroff  
+5,关机   				           poweroff  
 -p 关闭机器的时候关闭电源
 -n 在关闭机器时不同步数据 
 -w 不做关机的操作,只是把这个操作记录到日志里
 -d 不把关机的信息记录到日志文件里 
 -f 不调用 
-6,关机重启   				shutdown 
+6,关机重启   				      shutdown 
 命令格式: shutdown [选项] 时间 [信息]   时间--是必要参数,一定要加,可以用 
 now,也可以用+5 信息--在关机的时候给用户的信息 
 -t 这个参数后面需要加数字,比如 5,表示在发出关机信号 5 秒后开始关机 
@@ -20,22 +19,22 @@ now,也可以用+5 信息--在关机的时候给用户的信息
 -f 在重新启动的时候跳过 fsck(磁盘检查程序) 
 -F 重启时,忽略 fsck 程序(同-f 一样) 
 -c 取消已在执行的关机动作 例: #shutdown -k now just kid #shutdown -h now system shut down now 
-7,关机          			halt 选项同 poweroff 一样 
-8,重启计算机    			reboot 
+7,关机          			    halt 选项同 poweroff 一样 
+8,重启计算机    			    reboot 
 9,mount 挂载文件系统,
 umount 卸载文件系统 挂载光盘 #mount -t iso9660 /dev/cdrom /mnt/cdrom 或者#mount /mnt/cdrom 卸载光盘 #umount /mnt/cdrom 退出光盘 #eject 送入光盘 #eject -t 挂载软盘 #mount /mnt/floppy 卸载软盘 #umount /mnt/floppy 挂载本地 FAT32 分区,并使挂载后显示中文 #mount -t vfat -o iocharset=cp936 /dev/hda1 /mnt/win 卸载 #/umount /mnt/win 挂载 U 盘或者移动硬盘 #mount -o iocharset=utf8 /dev/sda1 /mnt/usb 卸载 #umount /mnt/usb 如果本地语言环境不是 utf8,而是 gb18030,需使用下面的命令挂载 #mount -o iocharset=gb2312 /dev/sda1 /mnt/usb 挂载一个光盘镜像至本地/mnt/cdrom 目录,
 用下面的命令 #mount -t iso9660 -o loop /tmp/cd.iso /mnt/cdrom 
-10,字符界面下安装操作系统的命令    	linux text 
+10,字符界面下安装操作系统的命令    	  linux text 
 11,选择不同方法安装操作系统的命令    	linux askmethod
  二)图形化界面相关命令 
 1,系统设置            	setup 
-2,服务启动设置        		ntsysv 
+2,服务启动设置        	ntsysv 
 3,登陆设置            	gdmsetup gdmconfig 
 4,网络设置            	networkconfig thizconfig
- 5,音量控制            	gnome-volume-control
- 6,KDE 控制中心	 		kcontrol 
-7,KDE 设置向导 			kpersonalizer 
-8,网络检测命令 			xmtr 
+ 5,音量控制            gnome-volume-control
+ 6,KDE 控制中心	 		    kcontrol 
+7,KDE 设置向导 			     kpersonalizer 
+8,网络检测命令 			     xmtr 
 三)信息显示命令 
 1,显示特定指令执行时所需消耗的时间及系统资源等资讯 		time 
 2,显示或设定系统的日期与时间 	date 
@@ -75,24 +74,24 @@ umount 卸载文件系统 挂载光盘 #mount -t iso9660 /dev/cdrom /mnt/cdrom �
 26,more 或 less 	分页显示文本文件内容 
 -s 将多个空行压缩成一个空行 
 -p 清楚屏幕后在显示 +行数 直接从给定的行数开始显示 -数字 规定每次显示多少行 
-27,cut 			显示每行从开头算起 num1 到 num2 的文字 # cat example test2 this is test1 # cut -c0-6 example ## print 开头算起前 6 个字元 test2 this i 
-28,pwd 			显示当前工作目录 
+27,cut 			  显示每行从开头算起 num1 到 num2 的文字 # cat example test2 this is test1 # cut -c0-6 example ## print 开头算起前 6 个字元 test2 this i 
+28,pwd 			  显示当前工作目录 
 29,locale 		显示当前语言环境 
-30,fc-list 		列出系统字体 
-31,jobs 		查看当前终端,当前 shell 下的后台的进程 
-32,ps 			查看系统中的进程 #ps aux #ps -elf 
+30,fc-list 	列出系统字体 
+31,jobs 		  查看当前终端,当前 shell 下的后台的进程 
+32,ps 			   查看系统中的进程 #ps aux #ps -elf 
 33,pstree 		将所有行程以树状图显示 
-34,top 			查看系统中实时进程 
-35,set 			查看系统变量 
+34,top 			  查看系统中实时进程 
+35,set 			  查看系统变量 
 36,export 		查看环境变量 
-37,man 			查看命令帮助信息 
-38,info 		查看命令帮助信息 
-39,help 		查看命令帮助信息 
+37,man 			  查看命令帮助信息 
+38,info 		  查看命令帮助信息 
+39,help 		  查看命令帮助信息 
 四)文件处理命令 
 1,file 			显示文件类型 
 2,mkdir 		创建目录 -p 依次创建目录(建立多级目录) -m 指定目录的权限 
 3,grep 			在指定的文本文件中查找指定的字符串 
-4,dd 			转换及输出数据 #dd if=/dev/hda of=/dev/hdb 硬盘对拷 
+4,dd 			  转换及输出数据 #dd if=/dev/hda of=/dev/hdb 硬盘对拷 
 5,find 			查找文件或目录 -name 根据指定的文件名进行查找 例:#find . -name "*.c" (将当前目录及其子目录下所有扩展名是 c 的文件列出) -type 查找指定类型的文件 
 类型文件有:
  l 链接   d 目录   f 普通文件   b 块设备文件   c 字符设备文件 s socket(套接字文件) p 管道(pipe)文件 例:#find ~ -type d -size n [bc] 查找 n 值大小的文件,默认单位是字节 b=bit c=kb 例: #find ~ -size 1500b #find ~ -size +1500b 查找大于 1.5M 大小的文件 #find ~ -size -1500b 查找小于 1.5M 大小的文件 -user <用户名> 查找属于指定用户的文件 #find / -user test -group <用户组名>查找属于指定用户组的文件 #find / -group test -newer <文件名> 查找比文件更新的文件 #find / -newer /home/httpd -cmin +n 查找在过去 n 分钟以内(-)或以外(+)被修改过的文件 #find ~ -cmin +20 -ctime +n 查找在过去 n 天以内(-)或以外(+)被修改过的文件 #find ~ -ctime +20 -atime +n 查找在过去 n 天以内(-)或以外(+)被读取过的文件 #find ~ -atime +20 -amin +n 查找在过去 n 分钟以内(-)或以外(+)被读取过的文件 #find ~ -amin +20 -links n 查找 n 个链接数的文件 #find /home -links
@@ -103,24 +102,24 @@ umount 卸载文件系统 挂载光盘 #mount -t iso9660 /dev/cdrom /mnt/cdrom �
 -u 只有源文件比目的文件新时才移动 
 7,diff 				比较并显示文件差异的部分 
 8,comm 				比较文件内容 
-9,ln 				建立文件之间的链接 -s 符号链接的选项 -f 强制建立链接 -i 出现提示 -v 显示操作信息 
-10,rm 				删除文件或目录 -r 递归删除 -f 强制删除 -v 删除时显示信息 -i 删除时会有提示确认 11,rmdir 删除空目录 -p 依次删除目录 -v 删除的时候显示信息 
-12,cp 				复制文件或目录 -R 递归复制整个目录里的内容 -f 强制复制 -p 复制完后保持目录的权限值 -i 复制时出现同名会有提示 -v 显示进度 -l 创建硬链接 -u 只有在目的文件比源文件旧时才复制 
-13,cd 				切换目录 #cd 回到用户的主目录 #cd - 回到用户的主目录 #cd ~ 回到用户的宿主目录 #cd .. 转到上一级目录 #cd / 切换到根目录 #cd . 切换到当前目录 
-14,tar -f 			这个选项是一定要用的,表示使用归档文件 -v 显示进度 -c 建立一个新的 tar 文件 -z 调用 gzip 或者 gunzip 程序 -j 调用 bzip2 或者 bunzip2 程序 -t 显示 tar 打包文件里的内容 -x 解压缩 tar 文件 -r 追加一个或多个文件到已有的 tar 包中 -u 如果文件比打包文件中的新就替换打包中的文件 -k 在解开打包文件时保持原有的文件 -C 指定解包的目的目录 -A 将其他打包中的文件追加到一个打包文件中 -M 将一个包分成多个包,但必须配合-L 参数一起使用(分包实现的过程比较麻烦) --get 提取某个文件 --remove -files 打包以后删除文件 -t 进行测试解压缩,不会解压到当前目录 格式: tar [选项] 生成打包文件名 需打包的源文件 
-15,compress 		压缩命令,生成.z 的文件 
+9,ln 				  建立文件之间的链接 -s 符号链接的选项 -f 强制建立链接 -i 出现提示 -v 显示操作信息 
+10,rm 				 删除文件或目录 -r 递归删除 -f 强制删除 -v 删除时显示信息 -i 删除时会有提示确认 11,rmdir 删除空目录 -p 依次删除目录 -v 删除的时候显示信息 
+12,cp 				 复制文件或目录 -R 递归复制整个目录里的内容 -f 强制复制 -p 复制完后保持目录的权限值 -i 复制时出现同名会有提示 -v 显示进度 -l 创建硬链接 -u 只有在目的文件比源文件旧时才复制 
+13,cd 				 切换目录 #cd 回到用户的主目录 #cd - 回到用户的主目录 #cd ~ 回到用户的宿主目录 #cd .. 转到上一级目录 #cd / 切换到根目录 #cd . 切换到当前目录 
+14,tar -f 	这个选项是一定要用的,表示使用归档文件 -v 显示进度 -c 建立一个新的 tar 文件 -z 调用 gzip 或者 gunzip 程序 -j 调用 bzip2 或者 bunzip2 程序 -t 显示 tar 打包文件里的内容 -x 解压缩 tar 文件 -r 追加一个或多个文件到已有的 tar 包中 -u 如果文件比打包文件中的新就替换打包中的文件 -k 在解开打包文件时保持原有的文件 -C 指定解包的目的目录 -A 将其他打包中的文件追加到一个打包文件中 -M 将一个包分成多个包,但必须配合-L 参数一起使用(分包实现的过程比较麻烦) --get 提取某个文件 --remove -files 打包以后删除文件 -t 进行测试解压缩,不会解压到当前目录 格式: tar [选项] 生成打包文件名 需打包的源文件 
+15,compress 		  压缩命令,生成.z 的文件 
 16,uncompress 		解压缩扩展名为.z 的文件 
-17,zip 				压缩文件或目录 
+17,zip 				 压缩文件或目录 
 18,unzip 			解压缩扩展名为.zip 的文件 
-19,gzip 			压缩命令(不支持对目录进行压缩) ,生成.gz 的文件 
+19,gzip 			 压缩命令(不支持对目录进行压缩) ,生成.gz 的文件 
 20,gunzip 或 zcat 	解压缩.gz 的文件 
-21,bzip2 			压缩命令,生成.bz2 的文件 
+21,bzip2 			  压缩命令,生成.bz2 的文件 
 22,bunzip2 			解压缩命令 
-23,touch 			更改文件的时间标记或创建一个空文件 
-24,unlink 			删除软链接 25,locate 在系统中搜索包含字符串的文件 
-26,ldd 				列出与文件有关的分享函数库 
+23,touch 			  更改文件的时间标记或创建一个空文件 
+24,unlink 			 删除软链接 25,locate 在系统中搜索包含字符串的文件 
+26,ldd 				  列出与文件有关的分享函数库 
 五)系统管理相关命令
-1,clear 			清楚界面 
+1,clear 			  清楚界面 
 2,konsole 			打开命令终端 
 3,gnome-terminal 	打开命令终端 
 4,fdisk 			修改磁盘分区 
