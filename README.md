@@ -1,3 +1,3 @@
 Shell-Script
 ============
-1. Linux Shell 
+1. Linux Command 
