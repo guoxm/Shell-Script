@@ -192,7 +192,7 @@ q 放弃保存并且退出 例如:#fdisk /dev/hda #fdisk -l
 10,telnet 			远程联机程序 
 11,ftp 				文件传输 
 12,rlogin 			远程登陆主机 
-3,rcp 				远程复制文件或目录 
+13,rcp 				远程复制文件或目录 
 14,ssh 				远程加密的联机 
 15,finger 			远端查询主机上的用户信息 
 16,mail 			收发邮件 
